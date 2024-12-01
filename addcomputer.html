@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Add Computer</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 id="title">Add Computer</h1>
+        </header>
+
+        <form id="survey-form" action="addcomputer.php" method="post">
+            <div class="form-input">
+                <label id="number-label">PC_ID</label>
+                <input type="text" id="Pc_Id" name="Pc_Id" placeholder="Enter PC ID" class="form-input-size" required>
+            </div>
+            <div class="form-input">
+                <label id="name-label">Processor</label>
+                <input type="text" id="processor" name="Processor" placeholder="Enter Processor" class="form-input-size" required>
+            </div>
+            <div class="form-input">
+                <p>Ram_Size</p>
+                <select id="ram_size" name="Ram_Size" class="form-input-size" required>
+                    <option disabled selected value>Select RAM Size</option>
+                    <option value="4GB">4GB</option>
+                    <option value="8GB">8GB</option>
+                    <option value="16GB">16GB</option>
+                    <option value="32GB">32GB</option>
+                    <option value="64GB">64GB</option>
+                </select>
+            </div>
+            <div class="form-input">
+                <label id="name-label">Storage_Size</label>
+                <input type="text" id="storage_size" name="Storage_Size" placeholder="Enter Storage Size" class="form-input-size" required>
+            </div>
+            <div class="form-input">
+                <label id="name-label">OS_Version</label>
+                <input type="text" id="os_version" name="Os_Version" placeholder="Enter OS Version" class="form-input-size" required>
+            </div>
+            <div class="form-input">
+                <p>Status</p>
+                <select id="status" name="Status" class="form-input-size" required>
+                    <option disabled selected value>Select current status</option>
+                    <option value="Working">Working</option>
+                    <option value="Non-Working">Non-Working</option>
+                </select>
+                <textarea name="Comment" placeholder="Enter your comment here..."></textarea>
+            </div>
+            <div class="form-input">
+                <label id="number-label">Lab_ID</label>
+                <input type="text" id="lab_Id" name="Lab_ID" placeholder="Enter Lab ID" class="form-input-size" required>
+            </div>
+            <div class="form-input">
+                <button type="submit" id="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

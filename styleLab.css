@@ -1,0 +1,75 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #2ebf91;
+    color: white;
+    padding: 10px 20px;
+}
+
+.nav-left h1 {
+    margin: 0;
+}
+
+.nav-right span {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.main-container {
+    display: flex;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+}
+
+.sidebar ul li:hover {
+    background-color: #ddd;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+.details-section {
+    display: none;
+}
+
+#labInchargeDetails img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+#labInchargeDetails, .details-section {
+    margin-bottom: 20px;
+}

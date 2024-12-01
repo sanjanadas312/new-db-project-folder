@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Lab Management System</title>
+    <link rel="stylesheet" href="home.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+</head>
+<body>
+    <!-- Background Container for Animated Circles -->
+    <div id="left-container" class="bubble-container"></div>
+    <div id="right-container" class="bubble-container"></div>
+
+    <!-- Main Content Section -->
+    <div class="content-wrapper">
+        <div class="hero-content">
+            <h1>Welcome to the Lab Management System</h1>
+            <p>Your lab, optimized and automated.</p>
+
+            <div class="button-container">
+                <a href="login.html" class="cta-button">Student</a>
+                <a href="index1.html" class="cta-button">Faculty</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Lab Management System. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Custom JavaScript for GSAP Animations -->
+    <script>
+        const numCircles = 15; // Number of particles (circles) on each side
+        const colors = ["#e3f2fd", "#bbdefb", "#90caf9", "#64b5f6", "#42a5f5"]; // Soft, calm colors
+
+        // Create circles on the left container
+        const leftContainer = document.getElementById('left-container');
+        for (let i = 0; i < numCircles; i++) {
+            const circle = document.createElement('div');
+            circle.classList.add('circle');
+            circle.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+            leftContainer.appendChild(circle);
+
+            const size = Math.random() * 30 + 20; // Random size between 20px and 50px
+            circle.style.width = `${size}px`;
+            circle.style.height = `${size}px`;
+            circle.style.top = `${Math.random() * 100}vh`; // Random vertical position
+            circle.style.left = `${Math.random() * 30}vw`; // Random position on the left side
+
+            gsap.to(circle, {
+                x: Math.random() * 200 - 100, // Random horizontal movement
+                y: Math.random() * 200 - 100, // Random vertical movement
+                repeat: -1, // Repeat infinitely
+                yoyo: true, // Back and forth movement
+                duration: Math.random() * 5 + 5, // Random duration for smooth movement
+                ease: "power2.inOut", // Smooth easing
+                delay: Math.random() * 3, // Stagger the start
+            });
+        }
+
+        // Create circles on the right container
+        const rightContainer = document.getElementById('right-container');
+        for (let i = 0; i < numCircles; i++) {
+            const circle = document.createElement('div');
+            circle.classList.add('circle');
+            circle.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+            rightContainer.appendChild(circle);
+
+            const size = Math.random() * 30 + 20; // Random size between 20px and 50px
+            circle.style.width = `${size}px`;
+            circle.style.height = `${size}px`;
+            circle.style.top = `${Math.random() * 100}vh`; // Random vertical position
+            circle.style.left = `${Math.random() * 30 + 70}vw`; // Random position on the right side
+
+            gsap.to(circle, {
+                x: Math.random() * 200 - 100, // Random horizontal movement
+                y: Math.random() * 200 - 100, // Random vertical movement
+                repeat: -1, // Repeat infinitely
+                yoyo: true, // Back and forth movement
+                duration: Math.random() * 5 + 5, // Random duration for smooth movement
+                ease: "power2.inOut", // Smooth easing
+                delay: Math.random() * 3, // Stagger the start
+            });
+        }
+
+        // Mouse movement effect (calm interaction with cursor)
+        window.addEventListener('mousemove', (e) => {
+            const mouseX = e.clientX;
+            const mouseY = e.clientY;
+
+            gsap.to(".circle", {
+                duration: 0.5,
+                x: (mouseX - window.innerWidth / 2) * 0.1, // Soft move towards the cursor
+                y: (mouseY - window.innerHeight / 2) * 0.1,
+                ease: "power1.out",
+                stagger: 0.1, // Slight stagger for soft effect
+            });
+        });
+    </script>
+</body>
+</html>

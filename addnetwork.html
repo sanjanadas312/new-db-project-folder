@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Add Network Equipment</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 id="title">Add Network Equipment</h1>
+        </header>
+
+        <form id="survey-form" action="addnetwork.php" method="post">
+            <div class="form-input">
+                <label id="number-label">Equipment_Id</label>
+                <input type="text" id="Equipment_Id" name="Equipment_Id" placeholder="Enter Equipment ID" class="form-input-size" required>
+            </div>
+            <div class="form-input">
+                <label id="name-label">Type</label>
+                <input type="text" id="Type" name="Type" placeholder="Enter Type" class="form-input-size" required>
+            </div>
+            
+            <div class="form-input">
+                <label id="name-label">Ip_Address</label>
+                <input type="text" id="Ip_Address" name="Ip_Address" placeholder="Enter Ip Address" class="form-input-size" required>
+            </div>
+            <div class="form-input">
+                <p>Status</p>
+                <select id="status" name="Status" class="form-input-size" required>
+                    <option disabled selected value>Select current status</option>
+                    <option value="Working">Working</option>
+                    <option value="Non-Working">Non-Working</option>
+                </select>
+                <textarea name="Comment" placeholder="Enter your comment here..."></textarea>
+            </div>
+            <div class="form-input">
+                <label id="number-label">Lab_ID</label>
+                <input type="text" id="lab_Id" name="Lab_ID" placeholder="Enter Lab ID" class="form-input-size" required>
+            </div>
+            <div class="form-input">
+                <button type="submit" id="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+
+   
+    <style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+    th, td {
+        padding: 10px;
+        text-align: center;
+        border: 1px solid #63a1e0;
+    }
+    th {
+        background-color: #090909;
+    }
+</style>
+</body>
+<script src="script.js"></script>
+</html>

@@ -1,0 +1,105 @@
+/* Reset and General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Fullscreen Background */
+body {
+    background-color: #222;
+    color: white;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Main Content Wrapper */
+.content-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1; /* Ensure content is above any background elements */
+}
+
+/* Hero Section */
+.hero-content h1 {
+    font-size: 3rem;
+    color: #00c6ff;
+    margin-bottom: 20px;
+    font-family: "Dancing Script", cursive;
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    color: #e0e0e0;
+    margin-bottom: 2rem;
+}
+
+/* Button Container */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Button Styles */
+.cta-button {
+    background-color: #00c6ff;
+    color: white;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-5px);
+    background-color: #009bd3;
+    box-shadow: 0 12px 20px rgba(0, 198, 255, 0.5);
+}
+
+/* Footer Styling */
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #e0e0e0;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* Bubble Containers for Left and Right Side */
+.bubble-container {
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    z-index: 0;
+    pointer-events: none; /* Make sure bubbles don't interfere with clicks */
+}
+
+/* Left side container */
+#left-container {
+    left: 0;
+    width: 30vw; /* 30% width for left side */
+}
+
+/* Right side container */
+#right-container {
+    right: 0;
+    width: 30vw; /* 30% width for right side */
+}
+
+/* Circle Style */
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.7;
+    pointer-events: none; /* So they don't interfere with interactions */
+    transition: transform 0.5s ease-out;
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <form id="registrationForm" action="register.php" method="POST">
+            <h2>Registration</h2>
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="text" name="roll_no" placeholder="Roll Number" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <select name="role">
+                <option value="student">Student</option>
+                <option value="lab_incharge">Lab Incharge</option>
+            </select>
+            <button type="submit">Register</button>
+            <p class="login-link">Already have an account? <a href="login.html">Login here</a></p>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
